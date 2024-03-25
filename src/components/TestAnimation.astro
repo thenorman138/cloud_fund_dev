@@ -1,0 +1,32 @@
+<template>
+  <div class="animation-element">
+    {{ text }}
+  </div>
+</template>
+
+<script context="module">
+  export async function load() {
+    const response = await fetch("../data/topTextMountain.json");
+    const jsonData = await response.json();
+    return { jsonData };
+  }
+</script>
+
+<script>
+  export default {
+    data() {
+      return {
+        text: "",
+      };
+    },
+    async mounted() {
+      this.text = this.jsonData.text;
+    },
+  };
+</script>
+
+<style>
+  .animation-element {
+    /* Your CSS styles here */
+  }
+</style>

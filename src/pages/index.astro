@@ -1,0 +1,561 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Card from "../components/Card.astro";
+// import TestAnimation from "../components/TestAnimation.astro";
+import "@astrojs/tailwind/base.css";
+import "./public/assets/scss/fonts.css";
+import circleMenu from "./public/assets/img/circleMenu.png";
+import TopSVG from "./public/assets/img/homeTopSvg.svg?raw";
+import CounterCircle from "./public/assets/img/counterCircle.svg?raw";
+import MountainTop from "./public/assets/img/mountainTop.svg?raw";
+import Clouds from "./public/assets/img/clouds.svg?raw";
+import MountainBG from "./public/assets/img/mountainBackground.svg?raw";
+import Mountain from "./public/assets/img/mountain.svg?raw";
+import MountainFront from "./public/assets/img/mountainFront.png";
+import TeamLine from "./public/assets/img/teamLine.svg?raw";
+import MountainSide from "./public/assets/img/mountainSide.svg?raw";
+import SplitterImage from "./public/assets/img/splitterImage.svg?raw";
+import RightPlant from "./public/assets/img/rightPlant.svg?raw";
+import LeftPlant from "./public/assets/img/leftPlant.svg?raw";
+import Monkey from "./public/assets/img/monkey.svg?raw";
+import BottomSection from "./public/assets/img/bottomSection.svg?raw";
+import PreFooter from "./public/assets/img/preFooterLines.svg?raw";
+import TeamLogo from "./public/assets/img/teamLogo.svg?raw";
+// import "../assets/scss/globals.scss";
+// import SiteMeta from "../components/SiteMeta.astro";
+import Header from "../components/Header.astro";
+// import Footer from "../components/Footer.astro";
+---
+
+<div class="main-container" style="margin:0 auto; max-width:100%;">
+  <Header />
+  <div class="title-section" style="margin-bottom:3rem;">
+    <h1 class="title-text">SUPPORTING BEAUTIFUL SPECIES AND FLOURISHING</h1>
+    <h1 class="title-text">LAND DISSIPATING BEFORE OUR EYES</h1>
+    <br />
+    <h3 class="subtitle-text">HELPING THE EARTH BREATHE</h3>
+  </div>
+  <div class="inner-menu" style="margin-top:6rem;">
+    <div class="grid grid-cols-3 gap-3">
+      <div class="inner-menu-items"></div>
+      <div class="inner-menu-items">
+        <div style="text-align: center;">
+          <Image
+            src={circleMenu}
+            alt="hand drawn circle"
+            width="100px"
+            height="120px"
+            style={"margin:0 auto"}
+          />
+        </div>
+        WORK WITH US
+      </div>
+      <div class="inner-menu-items"></div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3">
+      <div class="inner-menu-items">
+        <div style="text-align: center;">
+          <Image
+            src={circleMenu}
+            alt="hand drawn circle"
+            width="100px"
+            height="120px"
+            style={"margin:0 auto"}
+          />
+        </div>
+        WHERE WE WORK
+      </div>
+      <div class="inner-menu-items"></div>
+      <div class="inner-menu-items">
+        <div style="text-align: center;">
+          <Image
+            src={circleMenu}
+            alt="hand drawn circle"
+            width="100px"
+            height="120px"
+            style={"margin:0 auto"}
+          />
+        </div>
+        OUR STORY
+      </div>
+    </div>
+  </div>
+  <div class="first-section" style="text-align:center;">
+    <img
+      src="/headimg.png"
+      alt="Image"
+      style="width:100%; height: auto; margin-top:55px;"
+      class="fade-in"
+    />
+  </div>
+  <div class="topSVG" style="position:relative;">
+    <Fragment set:html={TopSVG} />
+    <h1 class="topSvgTitle">OUR IMPACT</h1>
+    <h1 class="topSvgBlurbLeft">A SMALL FUND WITH BIG DREAMS</h1>
+    <h1 class="topSvgBlurbRight">
+      WE MEASURE IMPACT IN ACRES OF LAND AND VOLUME OF SEA SAVED FROM
+      DESTRUCTION, SPECIES SAFEGUARDED,PROJECTS SUPPORTED, AND DOLLARS RAISED
+      FOR BIO-CULTURAL DIVERSITY THROUGH OUR 4-PILLAR APPROACH. WE MAKE OUR
+      IMPACT THROUGH 'CONNECTING THE TREES'.
+    </h1>
+  </div><!-- End of topSVG -->
+  <div class="spacer"></div>
+  <div class="counter-container">
+    <div class="counter-grid grid grid-cols-5 gap-5">
+      <div class="counter-items">
+        <div class="counter-img">
+          <Fragment set:html={CounterCircle} />
+        </div>
+        <div class="counter-text">$1.8 MILLION DIRECT DONATION</div>
+      </div>
+      <div class="counter-items">
+        <div class="counter-img">
+          <Fragment set:html={CounterCircle} />
+        </div>
+        <div class="counter-text">18 COUNTRIES, 29 PROJECTS</div>
+      </div>
+      <div class="counter-items">
+        <div class="counter-img">
+          <Fragment set:html={CounterCircle} />
+        </div>
+        <div class="counter-text">
+          $2 MILLION RAISED FROM OTHER DONORS FOR PARTNERS
+        </div>
+      </div>
+      <div class="counter-items">
+        <div class="counter-img">
+          <Fragment set:html={CounterCircle} />
+        </div>
+        <div class="counter-text">2.1 MILLION HECTARES IMPACTED</div>
+      </div>
+      <div class="counter-items">
+        <div class="counter-img">
+          <Fragment set:html={CounterCircle} />
+        </div>
+        <div class="counter-text">47 ENDANGERED SPECIES SUPPORTED</div>
+      </div>
+    </div>
+  </div><!-- End of counter-container -->
+  <div class="spacer"></div>
+  <div class="mountain-svg" style="position:relative;">
+    <Fragment set:html={MountainTop} />
+    <div class="text-over-mountain__left">
+      COMMUNITIES FACE A 'POLYCRISIS' OF CLIMATE CHANGE, HABITAT FRAGMENTATION
+      AND LOSS, LAND CONVERSION, AND DETERIORATING LAND ETHICS. IT IS LOCAL
+      PEOPLE WHO ACTUALLY LIVE IN THE MOST ECOLOGICALLY RICH PLACES ON EARTH
+      THAT CAN REVERSE THIS. THEY REQUIRE SUPPORT TO REALIZE THEIR AUTHENTIC
+      VISIONS FOR PROTECTING THE LAND AND SEAS.
+    </div>
+    <div class="text-over-mountain__right">
+      THOUGH A SMALL FUND, WE MAKE OUR IMPACT THROUGH PROVIDING QUICK RESPONSE
+      GRANTS, CONNECTING COMMUNITIES AND NGOS TO THE RIGHT FUNDERS, AND
+      SUPPORTING LOCAL AND GLOBAL ARTISTS TO TELL STORIES THAT BUILD AWARENESS.
+    </div>
+  </div>
+  <div class="cloud-sect" style="margin-top:-20%;">
+    <div class="cloud-container">
+      <Fragment set:html={Clouds} />
+    </div>
+    <div class="mountain-container">
+      <div>
+        <Fragment set:html={MountainBG} />
+      </div>
+      <!-- <div class="text-animation-container">
+        <TestAnimation />
+      </div> -->
+      <div style="margin-top: -45%;">
+        <Fragment set:html={Mountain} />
+      </div>
+      <div style="margin-top:-45%; margin-left:1%;">
+        <img
+          width="100%"
+          height="100%"
+          src="./public/assets/img/mountainFront.png"
+          alt="Description of your image"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="blue-sect">
+    <div class="blue-headline">
+      <h1>TRUST. SOLIDARITY. RELATIONALITY. RECIPROCITY</h1>
+    </div>
+    <div class="blue-subtitle"><h3>A WORDLD OF MANY WORLDS.</h3></div>
+    <br />
+    <div class="blue-paragraph">
+      ADHERING TO INDIGENOUS VALUES OF TRUST, SOLIDARITY, RELATIONALITY, AND
+      RECIPROCITY, OUR GRANTS ARE ALWAYS GIVEN AS GENERAL SUPPORT SO THAT THE
+      COMMUNITY OR NGO CAN DECIDE ON ITS OWN WHAT ACTIONS TO PRIORITIZE FOR THE
+      GOOD OF THE WORK. WE ARE CONSTANTLY SEEKING DONORS TO SUPPORT THE GENERAL
+      FUND THAT MAKES THE QUICK RESPONSE GRANTS POSSIBLE.
+    </div>
+  </div>
+  <div class="team-svg">
+    <div class="team-line-svg" style="position: relative;">
+      <Fragment set:html={TeamLine} />
+      <div class="team-container__left">
+        <h1 class="team-title">OUR TEAM</h1>
+        <img
+          width="100%"
+          height="100%"
+          src="./public/assets/img/teamLogo.png"
+          alt="Description of your image"
+        />
+      </div>
+      <div class="team-container__middle"></div>
+      <div class="team-container__right">
+        <h1 class="team-title">OUR TEAM</h1>
+        <img
+          width="100%"
+          height="100%"
+          src="./public/assets/img/teamLogo.png"
+          alt="Description of your image"
+        />
+      </div>
+      <div class="team-description">
+        <h2 class="desc">
+          AS A 501(C)(3) NON-PROFIT ORGANIZATION REGISTERED IN THE STATE OF DE,
+          WE ARE SUPPORTED BY AN ACCOUNTING AND LEGAL TEAM IN NEW YORK.
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="mountain-sect">
+    <Fragment set:html={MountainSide} />
+  </div>
+  <div class="blue-sect">
+    <div class="blue-light-headline">
+      <h1>
+        PHILANTHROPY ISN'T WORKING OPTIMALLY FOR INDIGENOUS COMMUNITIES, WHO
+        PROTECT 80% OF THE WORLD'S REMAINING BIODIVERSITY & INTACT FORESTED
+        LANDSCAPES.
+      </h1>
+    </div>
+  </div>
+  <div class="splitter-svg">
+    <Fragment set:html={SplitterImage} />
+  </div>
+  <div class="monkey-sect">
+    <div class="left-plant-wrapper">
+      <Fragment set:html={LeftPlant} />
+    </div>
+    <div class="right-plant-wrapper">
+      <Fragment set:html={RightPlant} />
+    </div>
+    <div class="monkey-wrapper">
+      <Fragment set:html={Monkey} />
+    </div>
+  </div>
+  <div class="bottom-svg">
+    <Fragment set:html={BottomSection} />
+  </div>
+  <div class="pre-footer-svg">
+    <Fragment set:html={PreFooter} />
+  </div>
+</div>
+
+<script>
+  // Debounce function
+  function debounce(func, wait, immediate) {
+    let timeout;
+    return function () {
+      const context = this,
+        args = arguments;
+      const later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
+
+  // Your existing code for animating SVG paths
+  const svgLeft = document.getElementById("svgPathLeft");
+  const lengthLeft = svgLeft.getTotalLength();
+  svgLeft.style.strokeDasharray = lengthLeft;
+  svgLeft.style.strokeDashoffset = lengthLeft;
+
+  const svgRight = document.getElementById("svgPathRight");
+  const lengthRight = svgRight.getTotalLength();
+  svgRight.style.strokeDasharray = lengthRight;
+  svgRight.style.strokeDashoffset = lengthRight;
+
+  window.addEventListener(
+    "scroll",
+    debounce(function () {
+      const scrollpercent =
+        window.scrollY /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight);
+
+      const drawLeft = lengthLeft * scrollpercent * 7;
+      svgLeft.style.strokeDashoffset = lengthLeft - drawLeft;
+
+      const drawRight = lengthRight * scrollpercent * 7;
+      svgRight.style.strokeDashoffset = lengthRight - drawRight;
+    }, 10)
+  );
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cloudSect = document.querySelector(".cloud-sect");
+    const mountainContainer = document.querySelector(".mountain-container");
+
+    function fadeInMountain() {
+      const cloudSectRect = cloudSect.getBoundingClientRect();
+      const triggerPoint =
+        cloudSectRect.top + window.scrollY - window.innerHeight / 2;
+
+      if (window.scrollY > triggerPoint) {
+        mountainContainer.classList.add("fade-in");
+        mountainContainer.classList.add("move-up");
+      } else {
+        mountainContainer.classList.remove("fade-in");
+        mountainContainer.classList.remove("move-up");
+      }
+    }
+
+    window.addEventListener("scroll", fadeInMountain);
+    window.addEventListener("resize", fadeInMountain);
+    fadeInMountain(); // Initial check on page load
+  });
+</script>
+
+<style>
+  .inner-menu-items {
+    text-align: center;
+  }
+  .title-text,
+  .subtitle-text {
+    font-family: "Futura";
+    font-weight: bold;
+    text-align: center;
+  }
+  .title-text {
+    font-size: 2rem;
+    letter-spacing: 0.1rem !important;
+  }
+  .subtitle-text {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    letter-spacing: 0.3rem !important;
+  }
+  .fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .topSvgTitle {
+    font-weight: bold;
+    font-size: 4rem;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+  }
+  .topSvgBlurbLeft {
+    font-weight: bold;
+    font-size: 2rem;
+    position: absolute;
+    max-width: 15rem;
+    text-align: right;
+    left: 22%;
+    top: 72%;
+    transform: translate(-50%, -50%);
+  }
+  .topSvgBlurbRight {
+    font-weight: bold;
+    font-size: 0.8rem;
+    position: absolute;
+    max-width: 15rem;
+    text-align: left;
+    right: 8%;
+    top: 74%;
+    transform: translate(-50%, -50%);
+  }
+  .spacer {
+    height: 5vh;
+  }
+  .counter-items {
+    padding: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .counter-text {
+    margin-top: 1rem;
+  }
+  .cloud-container {
+    position: relative;
+
+    width: 150%; /* Adjust as needed */
+    margin-left: -25%; /* Half of the excess width to keep it centered */
+    margin-right: -25%; /* Half of the excess width to keep it centered */
+  }
+  .mountain-container {
+    width: 150%; /* Adjust as needed */
+    margin-left: -25%; /* Half of the excess width to keep it centered */
+    margin-right: -25%; /* Half of the excess width to keep it centered */
+    margin-top: -40%;
+    opacity: 0;
+    transform: translateY(75rem);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+  .text-over-mountain__left {
+    left: 12%;
+    position: absolute;
+    width: 18%;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.2rem;
+    top: 20%;
+  }
+  .text-over-mountain__right {
+    right: 10%;
+    position: absolute;
+    width: 25%;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.2rem;
+    top: 20%;
+  }
+  .mountain-container.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .blue-sect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Adjust the height of the opaque top edge */
+    background-image: linear-gradient(
+      to bottom,
+      rgb(0, 34, 53, 0),
+      rgb(0, 34, 53, 0.5)
+    ); /* Adjust the opacity (rgba) and direction as needed */
+  }
+  .blue-sect {
+    text-align: center;
+    padding: 4rem;
+    position: relative;
+    z-index: 1000;
+    margin-top: -5%;
+    background-color: #002235;
+    min-height: 20vh;
+    color: white;
+  }
+  .blue-headline {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+  }
+  .blue-subtitle {
+    font-size: 1.4rem;
+  }
+  .blue-paragraph {
+    font-size: 1.1rem;
+    width: 65%;
+    margin: 0 auto;
+  }
+  .blue-light-headline {
+    font-weight: light;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    width: 65%;
+    margin: 0 auto;
+  }
+  .mountain-sect {
+    margin-top: -15%;
+    width: 105%; /* Adjust as needed */
+    position: relative;
+  }
+  .team-line-svg {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .team-container__left {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    text-align: center;
+    top: 1%;
+    margin: 0 auto;
+  }
+  .team-container__middle {
+    position: absolute;
+  }
+  .team-container__right {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    text-align: center;
+    top: 1%;
+    right: 12%;
+  }
+  .team-title {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.8rem;
+    margin-bottom: 8rem;
+  }
+  .team-description {
+    position: absolute;
+    top:27%;
+    right:12%
+  }
+  .team-description .desc{
+    font-weight: bold;
+    font-size:3rem;
+    letter-spacing: .1rem;
+    line-height: 4rem;
+
+  } 
+  .splitter-svg {
+    margin-top: -10%;
+  }
+  .monkey-sect {
+    margin-top: -5rem;
+    position: relative;
+  }
+  .left-plant-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+  }
+  .right-plant-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20rem;
+  }
+  .monkey-wrapper {
+    width: 35rem;
+    margin: 0 auto;
+    padding-top: 15rem;
+  }
+  .bottom-svg {
+    margin-top: -33rem;
+  }
+</style>
