@@ -1,27 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
+// import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import Card from "../components/Card.astro";
+// import Card from "../components/Card.astro";
 // import TestAnimation from "../components/TestAnimation.astro";
 import "@astrojs/tailwind/base.css";
-import "./public/assets/scss/fonts.css";
-import circleMenu from "./public/assets/img/circleMenu.png";
-import TopSVG from "./public/assets/img/homeTopSvg.svg?raw";
-import CounterCircle from "./public/assets/img/counterCircle.svg?raw";
-import MountainTop from "./public/assets/img/mountainTop.svg?raw";
-import Clouds from "./public/assets/img/clouds.svg?raw";
-import MountainBG from "./public/assets/img/mountainBackground.svg?raw";
-import Mountain from "./public/assets/img/mountain.svg?raw";
-import MountainFront from "./public/assets/img/mountainFront.png";
-import TeamLine from "./public/assets/img/teamLine.svg?raw";
-import MountainSide from "./public/assets/img/mountainSide.svg?raw";
-import SplitterImage from "./public/assets/img/splitterImage.svg?raw";
-import RightPlant from "./public/assets/img/rightPlant.svg?raw";
-import LeftPlant from "./public/assets/img/leftPlant.svg?raw";
-import Monkey from "./public/assets/img/monkey.svg?raw";
-import BottomSection from "./public/assets/img/bottomSection.svg?raw";
-import PreFooter from "./public/assets/img/preFooterLines.svg?raw";
-import TeamLogo from "./public/assets/img/teamLogo.svg?raw";
+// import "./public/assets/css/fonts.css";
+import circleMenu from "../assets/img/circleMenu.png";
+import TopSVG from "../assets/img/homeTopSvg.svg?raw";
+import CounterCircle from "../assets/img/counterCircle.svg?raw";
+import MountainTop from "../assets/img/mountainTop.svg?raw";
+import Clouds from "../assets/img/clouds.svg?raw";
+import MountainBG from "../assets/img/mountainBackground.svg?raw";
+import Mountain from "../assets/img/mountain.svg?raw";
+import MountainFront from "../assets/img/mountainFront.png";
+import TeamLine from "../assets/img/teamLine.svg?raw";
+import MountainSide from "../assets/img/mountainSide.svg?raw";
+import SplitterImage from "../assets/img/splitterImage.svg?raw";
+import RightPlant from "../assets/img/rightPlant.svg?raw";
+import LeftPlant from "../assets/img/leftPlant.svg?raw";
+import Monkey from "../assets/img/monkey.svg?raw";
+import BottomSection from "../assets/img/bottomSection.svg?raw";
+import PreFooter from "../assets/img/preFooterLines.svg?raw";
+import TeamLogo from "../assets/img/teamLogo.svg?raw";
 // import "../assets/scss/globals.scss";
 // import SiteMeta from "../components/SiteMeta.astro";
 import Header from "../components/Header.astro";
@@ -328,6 +328,31 @@ import Header from "../components/Header.astro";
 </script>
 
 <style>
+  /* Define Futura font */
+  @font-face {
+    font-family: "Futura";
+    src:
+      url("../fonts/Futura.woff2") format("woff2"),
+      url("../fonts/Futura.woff") format("woff");
+    /* Add additional font formats if necessary */
+  }
+
+  @font-face {
+    font-family: "Myriad";
+    src: url("../fonts/Futura.otf") format("otf");
+    /* Add additional font formats if necessary */
+  }
+
+  /* Apply Futura font to body */
+  body {
+    font-family: "Futura", sans-serif;
+    overflow-x: hidden;
+    /* Fallback font family */
+  }
+
+  .myriad-font {
+    font-family: "Myriad", sans-serif;
+  }
   .inner-menu-items {
     text-align: center;
   }
@@ -521,16 +546,15 @@ import Header from "../components/Header.astro";
   }
   .team-description {
     position: absolute;
-    top:27%;
-    right:12%
+    top: 27%;
+    right: 12%;
   }
-  .team-description .desc{
+  .team-description .desc {
     font-weight: bold;
-    font-size:3rem;
-    letter-spacing: .1rem;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
     line-height: 4rem;
-
-  } 
+  }
   .splitter-svg {
     margin-top: -10%;
   }

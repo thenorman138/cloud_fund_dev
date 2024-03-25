@@ -1,0 +1,24 @@
+/* Define Futura font */
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/Futura.woff2') format('woff2'),
+        url('../fonts/Futura.woff') format('woff');
+    /* Add additional font formats if necessary */
+}
+
+@font-face {
+    font-family: 'Myriad';
+    src: url('../fonts/Futura.otf') format('otf');
+    /* Add additional font formats if necessary */
+}
+
+/* Apply Futura font to body */
+body {
+    font-family: 'Futura', sans-serif;
+    overflow-x: hidden;
+    /* Fallback font family */
+}
+
+.myriad-font{
+    font-family: 'Myriad', sans-serif;
+}
