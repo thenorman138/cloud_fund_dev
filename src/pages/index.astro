@@ -8,28 +8,40 @@ import "@astrojs/tailwind/base.css";
 import circleMenu from "../assets/img/circleMenu.png";
 import TopSVG from "../assets/img/homeTopSvg.svg?raw";
 import CounterCircle from "../assets/img/counterCircle.svg?raw";
-import MountainTop from "../assets/img/mountainTop.svg?raw";
+import MountainTopSVG from "../assets/img/mountainTop.svg?raw";
 import Clouds from "../assets/img/clouds.svg?raw";
 import MountainBG from "../assets/img/mountainBackground.svg?raw";
 import Mountain from "../assets/img/mountain.svg?raw";
 import MountainFront from "../assets/img/mountainFront.png";
-import TeamLine from "../assets/img/teamLine.svg?raw";
+import TeamLine from "../assets/img/newTeamLine.svg?raw";
 import MountainSide from "../assets/img/mountainSide.svg?raw";
 import SplitterImage from "../assets/img/splitterImage.svg?raw";
+// import MountainOverlayLogo from "../assets/img/mountainOverlayImg.svg?raw";
 import RightPlant from "../assets/img/rightPlant.svg?raw";
 import LeftPlant from "../assets/img/leftPlant.svg?raw";
 import Monkey from "../assets/img/monkey.svg?raw";
 import BottomSection from "../assets/img/bottomSection.svg?raw";
-import PreFooter from "../assets/img/preFooterLines.svg?raw";
+import ButtonOutline from "../assets/img/buttonOutline.svg?raw";
 import TeamLogo from "../assets/img/teamLogo.svg?raw";
+import TeamIcon from "./public/assets/img/teamIcon.svg?raw";
 // import "../assets/scss/globals.scss";
 // import SiteMeta from "../components/SiteMeta.astro";
 import Header from "../components/Header.astro";
 // import Footer from "../components/Footer.astro";
 ---
 
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"
+  type="text/javascript"></script>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
+
 <div class="main-container" style="margin:0 auto; max-width:100%;">
   <Header />
+  <!------------------->
+  <!-- Beg. of Hero -->
+  <!------------------->
   <div class="title-section" style="margin-bottom:3rem;">
     <h1 class="title-text">SUPPORTING BEAUTIFUL SPECIES AND FLOURISHING</h1>
     <h1 class="title-text">LAND DISSIPATING BEFORE OUR EYES</h1>
@@ -84,100 +96,206 @@ import Header from "../components/Header.astro";
   </div>
   <div class="first-section" style="text-align:center;">
     <img
-      src="/headimg.png"
+      src="./public/assets/img/headerImage.png"
       alt="Image"
-      style="width:100%; height: auto; margin-top:55px;"
-      class="fade-in"
+      style="width:100%; height: auto; margin-top:55px;opacity:0;"
+      id="topImg"
     />
   </div>
   <div class="topSVG" style="position:relative;">
-    <Fragment set:html={TopSVG} />
+    <div style="margin-left:-2%; margin-right:-2%;">
+      <Fragment set:html={TopSVG} />
+    </div>
     <h1 class="topSvgTitle">OUR IMPACT</h1>
-    <h1 class="topSvgBlurbLeft">A SMALL FUND WITH BIG DREAMS</h1>
-    <h1 class="topSvgBlurbRight">
-      WE MEASURE IMPACT IN ACRES OF LAND AND VOLUME OF SEA SAVED FROM
-      DESTRUCTION, SPECIES SAFEGUARDED,PROJECTS SUPPORTED, AND DOLLARS RAISED
-      FOR BIO-CULTURAL DIVERSITY THROUGH OUR 4-PILLAR APPROACH. WE MAKE OUR
-      IMPACT THROUGH 'CONNECTING THE TREES'.
-    </h1>
-  </div><!-- End of topSVG -->
+    <div class="blurbContainer">
+      <h1 class="topSvgBlurbLeft">A SMALL FUND WITH BIG DREAMS</h1>
+      <h1 class="topSvgBlurbRight">
+        WE MEASURE IMPACT IN ACRES OF LAND AND VOLUME OF SEA SAVED FROM
+        DESTRUCTION, SPECIES SAFEGUARDED,PROJECTS SUPPORTED, AND DOLLARS RAISED
+        FOR BIO-CULTURAL DIVERSITY THROUGH OUR 4-PILLAR APPROACH. WE MAKE OUR
+        IMPACT THROUGH 'CONNECTING THE TREES'.
+      </h1>
+    </div>
+  </div>
+  <!------------------->
+  <!-- End of Hero -->
+  <!------------------->
+
   <div class="spacer"></div>
+
+  <!------------------->
+  <!-- Beg. of Counters -->
+  <!------------------->
   <div class="counter-container">
     <div class="counter-grid grid grid-cols-5 gap-5">
       <div class="counter-items">
-        <div class="counter-img">
-          <Fragment set:html={CounterCircle} />
+        <div class="counter-img" id="counter-img-1">
+          <!-- <Fragment set:html={CounterCircle} /> -->
         </div>
         <div class="counter-text">$1.8 MILLION DIRECT DONATION</div>
       </div>
       <div class="counter-items">
-        <div class="counter-img">
-          <Fragment set:html={CounterCircle} />
+        <div class="counter-img counter-hide" id="counter-img-2">
+          <!-- <Fragment set:html={CounterCircle} /> -->
         </div>
         <div class="counter-text">18 COUNTRIES, 29 PROJECTS</div>
       </div>
       <div class="counter-items">
-        <div class="counter-img">
-          <Fragment set:html={CounterCircle} />
+        <div class="counter-img" id="counter-img-3">
+          <!-- <Fragment set:html={CounterCircle} /> -->
         </div>
         <div class="counter-text">
           $2 MILLION RAISED FROM OTHER DONORS FOR PARTNERS
         </div>
       </div>
       <div class="counter-items">
-        <div class="counter-img">
-          <Fragment set:html={CounterCircle} />
+        <div class="counter-img" id="counter-img-4">
+          <!-- <Fragment set:html={CounterCircle} /> -->
         </div>
         <div class="counter-text">2.1 MILLION HECTARES IMPACTED</div>
       </div>
       <div class="counter-items">
-        <div class="counter-img">
-          <Fragment set:html={CounterCircle} />
+        <div class="counter-img" id="counter-img-5">
+          <!-- <Fragment set:html={CounterCircle} /> -->
         </div>
         <div class="counter-text">47 ENDANGERED SPECIES SUPPORTED</div>
       </div>
     </div>
-  </div><!-- End of counter-container -->
+  </div>
+  <!------------------->
+  <!-- End of Counters -->
+  <!------------------->
+
   <div class="spacer"></div>
-  <div class="mountain-svg" style="position:relative;">
-    <Fragment set:html={MountainTop} />
-    <div class="text-over-mountain__left">
-      COMMUNITIES FACE A 'POLYCRISIS' OF CLIMATE CHANGE, HABITAT FRAGMENTATION
-      AND LOSS, LAND CONVERSION, AND DETERIORATING LAND ETHICS. IT IS LOCAL
-      PEOPLE WHO ACTUALLY LIVE IN THE MOST ECOLOGICALLY RICH PLACES ON EARTH
-      THAT CAN REVERSE THIS. THEY REQUIRE SUPPORT TO REALIZE THEIR AUTHENTIC
-      VISIONS FOR PROTECTING THE LAND AND SEAS.
+
+  <!------------------->
+  <!-- Beg. of Mtn 1 -->
+  <!------------------->
+  <div class="mountain-svg" id="mountain-svg" style="position:relative;">
+    <div style="margin-left:-2%; margin-right:-2%;">
+      <!-- <Fragment set:html={MountainTopSVG} /> -->
+      <div
+        id="mtnSvgLineWrapper"
+        class="section-wrapper"
+        style="margin-top:2rem;"
+      >
+        <svg
+          id="svgMtn"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 846.79 677"
+        >
+          <defs>
+            <style>
+              .mtncls-1 {
+                fill: none;
+                stroke: #002235;
+                stroke-miterlimit: 10;
+                stroke-width: 50px;
+              }
+            </style>
+          </defs>
+          <path
+            stroke="black"
+            stroke-width="4px"
+            id="mountainSvgLeft"
+            stroke-dasharray="0, 677"
+            class="mtncls-1"
+            d="M3.14 30.28 20.92 28.04 38.7 28.1 56.47 30.64 74.25 27.41 92.03 29.25 109.8 25.96 127.58 26.15 145.36 26.74 163.14 28.38 180.92 29.1 198.7 29.38 216.48 30.22 234.26 27.39 252.04 28.7 269.83 26.62 287.61 26.63 305.4 27.59 323.37 32.18 341.57 34.3 358.25 41.88 374.02 51.16 387.57 63.45 401.09 76.09 411.69 91.45 418.19 108.96 421.65 127.2 422.79 145.61 422.82 163.27 421.99 180.92 424.19 198.58 422.13 216.24 424.77 233.89 424.55 251.55 424.59 269.21 424.76 286.86 422.72 304.52 422.29 322.18 422.15 339.83 421.56 357.49 424.88 375.15 421.04 392.8 424.39 410.46 422.5 428.12 422.69 445.78 424.72 463.43 422.91 481.1 423.02 498.76 420.64 516.42 422.23 534.09"
+          ></path>
+          <path
+            stroke="black"
+            stroke-width="4px"
+            id="mountainSvgRight"
+            stroke-dasharray="0, 677"
+            class="mtncls-1"
+            d="M842.36 29.35 824.59 26.15 806.81 26.44 789.03 29.7 771.25 27.67 753.47 25.26 735.7 28.01 717.92 28 700.14 29.69 682.36 28.09 664.58 31.2 646.8 29.54 629.02 30.36 611.24 26.55 593.46 30.7 575.68 31.04 557.89 26.07 540.1 30.35 522.19 32.57 503.25 32.2 487.92 43.18 470.16 49.34 455.17 60.67 443.84 75.68 434.8 91.96 428.33 109.29 424.61 127.32 420.33 145.61 424.34 163.74 422.88 181.87 421.69 199.99 423.42 218.12 423.19 236.25 421.18 254.37 422.02 272.5 423.52 290.63 425.53 308.76 425.57 326.89 420.07 345.02 425.63 363.15 420.43 381.28 423.12 399.41 423.65 417.54 423.37 435.67 425.53 453.8 425.24 471.92 419.99 490.05 425.66 508.18 424.09 526.31 422.65 544.44 421.19 562.58 420.89 580.71 423.3 598.84 422.34 616.97 421.2 635.11 420.25 653.25 424.43 671.38"
+          ></path>
+        </svg>
+      </div>
     </div>
-    <div class="text-over-mountain__right">
-      THOUGH A SMALL FUND, WE MAKE OUR IMPACT THROUGH PROVIDING QUICK RESPONSE
-      GRANTS, CONNECTING COMMUNITIES AND NGOS TO THE RIGHT FUNDERS, AND
-      SUPPORTING LOCAL AND GLOBAL ARTISTS TO TELL STORIES THAT BUILD AWARENESS.
+    <div class="mtn-text-container">
+      <div class="text-over-mountain__left">
+        COMMUNITIES FACE A 'POLYCRISIS' OF CLIMATE CHANGE, HABITAT FRAGMENTATION
+        AND LOSS, LAND CONVERSION, AND DETERIORATING LAND ETHICS. IT IS LOCAL
+        PEOPLE WHO ACTUALLY LIVE IN THE MOST ECOLOGICALLY RICH PLACES ON EARTH
+        THAT CAN REVERSE THIS. THEY REQUIRE SUPPORT TO REALIZE THEIR AUTHENTIC
+        VISIONS FOR PROTECTING THE LAND AND SEAS.
+      </div>
+      <div class="text-over-mountain__right">
+        THOUGH A SMALL FUND, WE MAKE OUR IMPACT THROUGH PROVIDING QUICK RESPONSE
+        GRANTS, CONNECTING COMMUNITIES AND NGOS TO THE RIGHT FUNDERS, AND
+        SUPPORTING LOCAL AND GLOBAL ARTISTS TO TELL STORIES THAT BUILD
+        AWARENESS.
+      </div>
     </div>
   </div>
-  <div class="cloud-sect" style="margin-top:-20%;">
+  <div class="cloud-sect" style="margin-top:-22%;">
     <div class="cloud-container">
-      <Fragment set:html={Clouds} />
+      <div style="opacity:0;">
+        <Fragment set:html={Clouds} />
+      </div>
+      <h1 class="mountain-reveal-text">
+        FROM THE PEAKS TO THE VALLIES,<br />WE WILL NEVER SAY NO
+      </h1>
+      <div class="cloud-reveal">
+        <img
+          class="cloud-reveal-img"
+          src="./public/assets/img/cloud-reveal-FINAL.png"
+          alt="Description of your image"
+        />
+      </div>
     </div>
     <div class="mountain-container">
       <div>
         <Fragment set:html={MountainBG} />
       </div>
-      <!-- <div class="text-animation-container">
-        <TestAnimation />
-      </div> -->
+      <div class="top-text-player" style="z-index:1">
+        <dotlottie-player
+          src="https://lottie.host/18594928-f6d0-4720-96e2-0c53659906a5/TnkNq5ND9Z.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: auto"
+          direction="1"
+          playMode="normal"
+          loop
+          autoplay></dotlottie-player>
+      </div>
       <div style="margin-top: -45%;">
-        <Fragment set:html={Mountain} />
+        <div style="position: relative; z-index: 3;">
+          <Fragment set:html={Mountain} />
+        </div>
       </div>
       <div style="margin-top:-45%; margin-left:1%;">
-        <img
-          width="100%"
-          height="100%"
-          src="./public/assets/img/mountainFront.png"
-          alt="Description of your image"
-        />
+        <div class="bottom-text-player" style="z-index:5">
+          <dotlottie-player
+            src="https://lottie.host/52b1ec94-051e-4211-aa91-4eb47573becf/Berq6IyIPs.json"
+            background="transparent"
+            speed="1"
+            style="width: 100%; height: auto"
+            direction="1"
+            playMode="normal"
+            loop
+            autoplay></dotlottie-player>
+        </div>
+        <div style="z-index: 10; position: relative;">
+          <img
+            width="100%"
+            height="100%"
+            src="./public/assets/img/mountainFront.png"
+            alt="Description of your image"
+          />
+        </div>
       </div>
     </div>
   </div>
+  <!------------------->
+  <!-- End of Mtn 1 -->
+  <!------------------->
+
+  <!------------------->
+  <!-- beg. of Mtn blue -->
+  <!------------------->
   <div class="blue-sect">
     <div class="blue-headline">
       <h1>TRUST. SOLIDARITY. RELATIONALITY. RECIPROCITY</h1>
@@ -192,27 +310,97 @@ import Header from "../components/Header.astro";
       FUND THAT MAKES THE QUICK RESPONSE GRANTS POSSIBLE.
     </div>
   </div>
-  <div class="team-svg">
-    <div class="team-line-svg" style="position: relative;">
-      <Fragment set:html={TeamLine} />
-      <div class="team-container__left">
-        <h1 class="team-title">OUR TEAM</h1>
-        <img
-          width="100%"
-          height="100%"
-          src="./public/assets/img/teamLogo.png"
-          alt="Description of your image"
-        />
+  <!------------------->
+  <!-- End of Mtn blue -->
+  <!------------------->
+
+  <!------------------->
+  <!-- Beg of Team -->
+  <!------------------->
+  <div class="team-svg" id="team-svg">
+    <div class="team-line-svg" id="team-svg-line" style="position: relative;">
+      <div
+        class="team-svg-line-animate"
+        id="teamTriggerDiv"
+        style="margin-top: -2%"
+      >
+        <!-- <Fragment set:html={TeamLine} /> -->
+        <div id="section1Wrapper" class="section-wrapper">
+          <svg id="vectorSvg1" viewBox="0 0 697.25 2268.36">
+            <defs>
+              <style>
+                .teamcls {
+                  fill: none;
+                  stroke: #062334;
+                  stroke-miterlimit: 10;
+                  stroke-width: 50px;
+                }
+              </style>
+            </defs>
+            <path
+              id="vectorPath1"
+              class="teamcls"
+              stroke-dasharray="0, 2268.36"
+              d="M342.83 1.82 344.13 19.65 347.34 37.48 345.89 55.3 343.33 73.13 343.85 90.96 345.03 108.79 347.09 126.62 344.45 144.44 346.41 162.27 343.96 180.1 343.2 197.93 345.92 215.76 345.9 233.59 343.27 251.42 344.04 269.25 344.72 287.07 342.87 304.9 345.91 322.73 346.47 340.56 343.31 358.39 342.84 376.22 346.05 394.05 347.09 411.88 344.31 429.72 344.18 447.55 345.36 465.39 346.38 483.23 349.02 501.39 356.64 517.96 365.48 534.55 382.07 543.39 398.47 551.62 416.8 555.01 434.47 553.01 452.14 555.47 469.81 555.28 487.48 554.78 505.15 557.22 522.82 553.21 540.49 556.4 558.17 553.08 575.84 554.72 593.52 555.81 612.38 556.55 629.48 564.64 643.34 577.11 654.07 591.98 664.41 607.94 664.85 626.93 667.68 644.21 664.2 661.5 665.75 678.79 665.8 696.09 663.49 713.38 664.57 732.42 655.48 749.15 643.69 763.55 629.93 776.44 611.8 781.61 593.52 783.13 575.22 786.3 556.93 786.81 538.63 782.92 520.33 785.01 502.04 787.05 483.74 784.69 465.44 786.81 447.14 787.1 428.85 786.72 410.55 787.47 392.25 784.29 373.95 786.59 355.65 783.57 337.35 786.04 319.06 785.03 300.76 783.54 282.46 783.19 264.16 786.56 245.86 784.34 227.56 784.26 209.26 782.96 190.96 783.35 172.66 787.45 154.36 785.96 136.06 783.88 117.75 784.03 99.44 786.87 80.85 787.7 63.01 793.98 49.09 806.73 35.65 820.25 30.65 838.65 29.43 857.08 27.11 874.39 26.95 891.71 25.24 909.02 28.55 926.33 27.89 943.65 27.72 960.96 26.32 978.28 29.84 995.6 30.23 1014.15 37.55 1031.34 48.64 1046.4 63.54 1057.79 80.56 1066.06 99.44 1068.51 117.74 1065.99 136.03 1066.93 154.33 1065.5 172.63 1069.57 190.92 1067.69 209.22 1065.98 227.52 1066.37 245.82 1069.58 264.12 1068.85 282.41 1066.61 300.71 1069.11 319.01 1069.69 337.31 1068.27 355.61 1069.21 373.91 1069.95 392.2 1068.24 410.5 1066.38 428.8 1065.83 447.1 1068.21 465.4 1067.81 483.7 1066.48 502 1068.88 520.3 1068.24 538.6 1068.14 556.91 1067.8 575.21 1068.07 593.52 1067.28 612.32 1069.13 629.3 1077.33 645.19 1087.63 657.66 1102.27 664.46 1120.3 664.54 1139.31 666.07 1157.02 667.74 1174.73 663.62 1192.44 664.23 1210.15 664.43 1227.86 663.14 1245.57 663.1 1263.29 663.76 1281.16 671.05 1298.69 666.49 1317.99 661.07 1336.01 649.02 1350.49 634.49 1363.07 615.71 1367.36 596.91 1372.99 578.62 1371.37 560.32 1370.28 542.03 1369.25 523.73 1369.98 505.43 1369.63 487.13 1371.2 468.84 1370.65 450.54 1369.87 432.24 1370.01 413.94 1372.64 395.64 1372.85 377.34 1369.37 359.05 1369.09 340.75 1371.39 322.45 1372.93 304.16 1369.27 285.86 1371.18 267.56 1369.37 249.26 1371.75 230.96 1373.29 212.66 1370.01 194.36 1369.28 176.06 1369.59 157.76 1370.43 139.45 1370.49 121.14 1371.34 102.84 1372.78 83.77 1371.59 68 1382.42 51.83 1391.76 40.08 1406.53 31.32 1423.6 31.21 1442.76 32.06 1460.08 31.78 1477.39 32.43 1494.7 33.48 1512.01 32.22 1529.33 30.3 1546.65 30.7 1563.97 32.64 1581.29 33.56 1599.85 42.09 1616.36 51.98 1632.15 67.33 1642.78 84.48 1649.79 102.84 1654.46 121.13 1652.41 139.43 1654.35 157.73 1652.35 176.02 1651.07 194.32 1652.43 212.62 1652.22 230.92 1651.34 249.21 1654.94 267.51 1651.38 285.81 1651.26 304.11 1653.57 322.41 1654.87 340.71 1652.66 359 1651.3 377.3 1654.89 395.6 1653.12 413.89 1654.83 432.19 1651.17 450.49 1653.41 468.79 1651.13 487.09 1654.28 505.39 1651.57 523.69 1652.05 542 1653.85 560.3 1655.18 578.61 1651.05 596.91 1655.61 616.06 1653.52 632.82 1662.79 648.27 1673.64 659.44 1688.89 667.65 1706.03 669.68 1724.99 667.66 1743.76 670.48 1762.53 670.9 1781.3 670.74 1800.08 671.18 1818.86 670.07 1837.64 668.39 1856.42 665.12 1874.69 659.24 1892.4 648.52 1908.02 632.03 1917.24 615.5 1925.79 596.91 1930.16 578.86 1926.99 560.81 1927.26 542.75 1929.4 524.7 1930.72 506.64 1928.66 488.59 1927.02 470.53 1929.93 452.47 1926.13 434.41 1927.31 416.35 1928.19 398.29 1929.14 380.23 1928.57 364.68 1931.24 356.22 1944.31 351.94 1958.17 348.98 1976.37 351.17 1994.57 348.52 2012.77 352.24 2030.97 350.24 2049.17 352.65 2067.36 348.88 2085.56 348.5 2103.76 349.66 2121.96 348.68 2140.16 350.51 2158.36 350.86 2176.56 349.59 2194.76 348.89 2212.97 349.76 2231.17 349.14 2249.38 349.71 2267.59"
+            ></path>
+          </svg>
+        </div>
       </div>
-      <div class="team-container__middle"></div>
-      <div class="team-container__right">
-        <h1 class="team-title">OUR TEAM</h1>
-        <img
-          width="100%"
-          height="100%"
-          src="./public/assets/img/teamLogo.png"
-          alt="Description of your image"
-        />
+      <div class="team-container-wrap" style="margin-top: 2rem;">
+        <div class="team-container__left">
+          <h1 class="team-title">OUR TEAM</h1>
+          <img
+            width="100%"
+            height="100%"
+            src="./public/assets/img/teamLogo.png"
+            alt="Description of your image"
+          />
+        </div>
+        <div class="team-container__middle"></div>
+        <div class="team-container__right">
+          <div class="founder-title">
+            <h1>FOUNDER/CEO</h1>
+            <p>RAJEEV K. GOYAL,ESQ.</p>
+          </div>
+          <br />
+          <div class="founder-desc">
+            BORN ON LONG ISLAND, NEW YORK, RAJEEV GOYAL IS A BIODIVERSITY
+            CONSERVATIONIST, AUTHOR AND NON-PROFIT LEADER WITH OVER 20 YEARS'
+            EXPERIENCE WORKING ON THE GROUND GRAPPLLING WITH COMPLEX NATURE AND
+            LAND CONSERVATION ISSUES IN OVER 25 COUNTRIES. A GRADUATE OF BROWN
+            UNIVERSITY (BA, ENGLISH LITERATURE), NYU SCHOOL OF LAW (JURIS
+            DOCTORA) AND CORNELL UNIVERSITY (MASTERS OF AGRICULTURE), HIS FIRST
+            BOOK, THE SPRINGS OF NAMJE, TELLS THE STORY OF HIS LIFE AS A
+            VOLUNTEER IN THE PEACE CORPS IN NEPAL. RAJEEV WAS PROFILED BY PETER
+            HESSLER IN NEW YORKER MAGAZINE'S 'WORLD CHANGER' ISSUE.
+          </div>
+          <div class="team-list-container">
+            <ul class="team-list">
+              <li class="team-list-item">
+                Jeffrey S. Greener<br /><span class="team-subtitle"
+                  >(LEGAL ADVISOR)</span
+                >
+              </li>
+              <li class="team-list-item">William Dowell</li>
+              <li class="team-list-item">
+                Stephanie I. Handel<br /><span class="team-subtitle"
+                  >(FINANCE ADVISOR)</span
+                >
+              </li>
+              <li class="team-list-item">
+                Nitesh Singh<br /><span class="team-subtitle"
+                  >(GRANTS ADMINISTRATION)</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="team-blurb">
+        <h2 class="blurb">
+          We operate with an incredibly lean team led by our founder/CEO,
+          supported by volunteers and advisors.
+        </h2>
       </div>
       <div class="team-description">
         <h2 class="desc">
@@ -220,23 +408,199 @@ import Header from "../components/Header.astro";
           WE ARE SUPPORTED BY AN ACCOUNTING AND LEGAL TEAM IN NEW YORK.
         </h2>
       </div>
+      <div class="team-block-right-1">
+        <div class="team-block-title">
+          William Dowell <span class="team-block-subtitle">BOARD DIRECTOR</span>
+        </div>
+        <div class="team-block-desc">
+          William Thatcher Dowell is a renowned author, journalist, translator
+          and editor/producer. Between 1989 to 2001, Bill served as a
+          correspondent with Time Magazine, where he was the Southeast Asia
+          Bureau Chief from 1995 to 1997, based in Hong Kong. He spent 14 years
+          in the Paris Bureau as a contract stringer, and prior to that was a TV
+          correspondent for ABC News and NBC News, where he reported on and
+          Associate Producer of NPR's "All Things Considered." Bill is the
+          co-author of In the Shadow of the Dragon, with Winter Nie at IMD. Most
+          recently he was the co-editor of The Essential Edge.
+        </div>
+      </div>
+      <div class="team-block-left-1">
+        <div class="team-block-title">
+          DR. RAVINDRA GOYAL, MD. <span class="team-block-subtitle"
+            >BOARD DIRECTOR</span
+          >
+        </div>
+        <div class="team-block-desc">
+          Dr. Ravindra Goyal was born in Nasirabad, Rajasthan. He studied
+          medicine at SMS Medical College in Jaipur before immigrating to the
+          United States in 1974. A critical care pulmonologist for 50 years, he
+          is a donor and philanthropist to many biodiversity causes.
+        </div>
+        <br />
+        <div class="team-block-title">
+          Stephanie I. Handel, CPA, CFE <span class="team-block-subtitle"
+            >Finance Advisor</span
+          >
+        </div>
+        <div class="team-block-desc">
+          Stephanie is a Certified Public Accountant primarily focusing on
+          not-for-profit and governmental organizations. Stephanie graduated
+          Summa Cum Laude from Cornell University where she earned a Bachelor of
+          Science degree in applied economics and management. Stephanie also
+          holds a Master of Science degree in accounting from Syracuse
+          University.
+        </div>
+      </div>
+      <div class="team-block-right-2">
+        <div class="team-block-title">
+          NITESH SINGH <span class="team-block-subtitle"
+            >GRANTS ADMINISTRATOR</span
+          >
+        </div>
+        <div class="team-block-desc">
+          Nitesh Singh is wildlife enthusiast and researcher currently working
+          with the Vertical University project in Nepal as a conservation
+          officer. Holding a master's degree in Environmental Science from the
+          Central Department of Environmental Science, Tribhuvan University, he
+          has carried out many wildlife studies at different elevational
+          gradients of the Himalayas. Nitesh supports grant management and
+          administration at CFF.
+        </div>
+        <br />
+        <div class="team-block-title">
+          LOKENDRA YAKHA <span class="team-block-subtitle">BOARD DIRECTOR</span>
+        </div>
+        <div class="team-block-desc">
+          Belonging to the Yakha indigenous group of eastern Nepal, Lokendra
+          Bahadur Yakha was born in the hills of Kurule-Tenupa, Dhankuta at the
+          edge of the Koshi river. He is the founder of Tamur Learning Grounds,
+          a board member of the Vertical University project, and a visionary
+          farmer and protector of all life in mountains.
+        </div>
+      </div>
+      <div class="team-block-left-2">
+        <div class="team-block-title">
+          Jeffrey S. Greener <span class="team-block-subtitle"
+            >Legal Advisor</span
+          >
+        </div>
+        <div class="team-block-desc">
+          Jeff counsels many non-profit organizations, including public and
+          private charities, and he is experienced in structuring start-ups,
+          obtaining exemptions, and advising on compliance and governance
+          issues. A frequent lecturer on the topics of estate, retirement, and
+          business planning, Jeff has served as a board member and as chairman
+          of the Alzheimer's Foundation of America. He currently is serving as
+          Deputy Mayor of the Village of Kensington, New York.
+        </div>
+        <br />
+        <div class="team-block-title">
+          Charles Libor <span class="team-block-subtitle">Graphic Designer</span
+          >
+        </div>
+        <div class="team-block-desc">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+          vero eros et accumsan et iusto odio dignissim qui blandit praesent
+          luptatum zzril delenit augue duis dolore te feugait
+        </div>
+      </div>
+      <div class="vertical-uni">
+        <h1 class="vert-uni-text">THE <br />VERTICAL <br />UNIVERSITY</h1>
+      </div>
+      <div class="vertical-blurb">
+        <h2 class="vert-blurb-text">
+          WE FACILITATE COMMUNITY RECIPROCITY, AND HELP KEEP INDIGENOUS LAND
+          INTACT
+        </h2>
+      </div>
     </div>
   </div>
-  <div class="mountain-sect">
-    <Fragment set:html={MountainSide} />
-  </div>
-  <div class="blue-sect">
-    <div class="blue-light-headline">
-      <h1>
-        PHILANTHROPY ISN'T WORKING OPTIMALLY FOR INDIGENOUS COMMUNITIES, WHO
-        PROTECT 80% OF THE WORLD'S REMAINING BIODIVERSITY & INTACT FORESTED
-        LANDSCAPES.
-      </h1>
+  <!------------------->
+  <!-- End of Team -->
+  <!------------------->
+
+  <!------------------->
+  <!-- Beg of Mtn 2 -->
+  <!------------------->
+
+  <div class="mountain-sect" style="position: relative;">
+    <div class="mountain-front">
+      <img
+        class="mtnSideFrontLayer"
+        width="100%"
+        height="auto"
+        src="./public/assets/img/mountainFrontCutoutFull.png"
+        alt="Description of your image"
+      />
+    </div>
+    <div class="mountain-back" id="mountainBack">
+      <img
+        class="mtnSideBackLayer"
+        width="100%"
+        height="auto"
+        src="./public/assets/img/mountainCutout.png"
+        alt="Description of your image"
+      />
+    </div>
+    <img
+      class="mtnLogo"
+      id="mtnLogo"
+      width="35%"
+      height="auto"
+      src="./public/assets/img/mountainOverlayLogo.png"
+      alt="Description of your image"
+    />
+    <div class="blue-sect-mountain">
+      <div class="blue-light-headline">
+        <h1>
+          PHILANTHROPY ISN'T WORKING OPTIMALLY FOR INDIGENOUS COMMUNITIES, WHO
+          PROTECT 80% OF THE WORLD'S REMAINING BIODIVERSITY & INTACT FORESTED
+          LANDSCAPES.
+        </h1>
+      </div>
     </div>
   </div>
-  <div class="splitter-svg">
-    <Fragment set:html={SplitterImage} />
+  <!------------------->
+  <!-- End  of Mtn 2 -->
+  <!------------------->
+
+  <!------------------->
+  <!-- Beg of splitter -->
+  <!------------------->
+  <div class="splitter-svg" id="splitter-svg" style="position:relative;">
+    <div style="margin-left:-2%; margin-right:-2%;">
+      <Fragment set:html={SplitterImage} />
+    </div>
+    <div class="splitter-text">
+      <div class="splitter-left-container">
+        <div class="splitter-left-text">
+          Cloud Forest Fund seeks to evolve the way philanthropy & conservation
+          are practiced by exploring new models for fundraising and resource
+          galvanization that better serve human and non-human communities.
+        </div>
+      </div>
+      <div class="splitter-right-container">
+        <img
+          class="splitter-right-img"
+          src="./public/assets/img/splitterRightImage.png"
+          alt="Description of your image"
+        />
+        <h1 class="splitter">BUILDING HOMES & HABITATS</h1>
+      </div>
+    </div>
   </div>
+  <!------------------->
+  <!-- End  of Splitter -->
+  <!------------------->
+
+  <!------------------->
+  <!-- Beg  of Monkey -->
+  <!------------------->
   <div class="monkey-sect">
     <div class="left-plant-wrapper">
       <Fragment set:html={LeftPlant} />
@@ -244,37 +608,421 @@ import Header from "../components/Header.astro";
     <div class="right-plant-wrapper">
       <Fragment set:html={RightPlant} />
     </div>
+    <img
+      class="monkey-arch-text"
+      src="./public/assets/img/archText.png"
+      alt="Description of your image"
+    />
     <div class="monkey-wrapper">
-      <Fragment set:html={Monkey} />
+      <div class="monkey-img">
+        <Fragment set:html={Monkey} />
+      </div>
     </div>
   </div>
-  <div class="bottom-svg">
-    <Fragment set:html={BottomSection} />
+  <!------------------->
+  <!-- End  of Monkey -->
+  <!------------------->
+
+  <!------------------->
+  <!-- Beg  of Bottom section -->
+  <!------------------->
+  <div class="bottom-svg" style="position:relative;">
+    <div class="bottom-line-svg" style="margin-left:-2%; margin-right:-2%;">
+      <Fragment set:html={BottomSection} />
+    </div>
+    <div class="bottom-left-container">
+      <div class="bottom-text-block">
+        <div class="bottom-text-block-header">
+          REVITALISING <br />BIO-CULTURAL <br />HERITAGE
+        </div>
+        <div class="bottom-text-paragraph">
+          In Nepal, Rajeev also witnessed the commodification of land, and the
+          consequent accelerating pace of land grabbing and fragmentation with
+          the advent of haphazard roads into mountains. He saw firsthand how
+          land grabbing,conversion, and fragmentation are destroying the earth's
+          last intact bio-cultural landscapes, to the point where even the
+          Amazon Rainforest could one day be lost. He also saw the power of
+          small change through the Learning Grounds model.
+        </div>
+      </div>
+      <div class="bottom-text-block">
+        <div class="bottom-text-block-header">
+          A different <br />approach to <br />philanthropy
+        </div>
+        <div class="bottom-text-paragraph">
+          THIS BECAME THE CLOUD FOREST FUND APPROACH TO PHILANTHROPY. SMALL
+          FUNDS DEPLOYED AT THE RIGHT TIME CAN MAKE A PROFOUND DIFFERENCE -
+          WHETHER TO HIRE AN INDIGENOUS LAWYER TO AID WITH COMMUNAL LAND
+          TITLING, TO RENT A PONTOON TO TRANSPORT VILLAGERS TO AN IMPORTANT
+          PLANNING MEETING, OR TO HIRE A DRONE TO CAPTURE AN ILLEGAL LAND
+          INVASION THAT CAN BE USED IN COURT - ALL CAN HAVE THE NET EFFECT OF
+          SAVING LITERALLY HUNDREDS OF THOUSANDS OF ACRES OF PRISTINE FOREST AND
+          WETLANDS. WE HAVE SEEN THIS DYNAMIC PLAY OUT OVER AND OVER AGAIN. WHAT
+          IS NEEDED IS A GREAT DEAL OF TIME ON THE GROUND, LISTENING TO THE
+          MOUNTAINS AND UNDERSTANDING THE ROOT CAUSES.
+        </div>
+      </div>
+      <div class="bottom-text-block">
+        <div class="bottom-text-block-header">timing is <br />everything</div>
+        <div class="bottom-text-paragraph">
+          Small funds deployed at the right time can make a profound difference
+          - whether to hire an indigenous lawyer to aid with communal land
+          titling, to rent a pontoon to transport villagers to an important
+          planning meeting, or to hire a drone to capture an illegal land
+          invasion that can be used in court - all can have the net effect of
+          saving literally hundreds of thousands of acres of pristine forest and
+          wetlands. We have seen this dynamic play out over and over
+          again.understanding the root causes.
+        </div>
+      </div>
+    </div>
+    <div class="bottom-right-container">
+      <h1 class="bottom-right-headline">OUR APPROACH</h1>
+      <div class="bottom-text-block">
+        <div class="bottom-text-block-header">Micro-Conservation</div>
+        <div class="bottom-text-paragraph">
+          Cloud Forest Fund's approach was inspired by the lived experiences in
+          Nepal of our founder, Rajeev Goyal. After serving as a teacher in the
+          Peace Corps, Rajeev pioneered the idea of a 'Vertical University'
+          where the 'professors' of this university could be ordinary farmers,
+          who may not have a Ph.D. or have ever set foot in a school, but
+          possess intricate, intergenerational knowledge about local fauna and
+          flora critical for youth to attain. Over the course of two decades,
+          Rajeev helped establish dozens of “learning grounds,” essentially
+          micro-conservation hubs — the “classrooms” of the Vertical University
+          at different elevations. He observed firsthand the incredible agency,
+          dignity and creativity of people who live deep in the forest,
+          connected to land.
+        </div>
+      </div>
+      <div class="bottom-text-block">
+        <div class="bottom-text-block-header">
+          Reducing <br />bottlenecks for big <br />change
+        </div>
+        <div class="bottom-text-paragraph">
+          It is often very small bottlenecks holding back positive change, and
+          so small grants matter a lot. Grant making must be agile,
+          compassionate, and focused on problem solving in those ecological
+          spaces with the greatest ecological richness. Grants should not be
+          used to control communities and NGOs, and thus we believe in general
+          support. We build longterm, output-focused relationships with
+          partners, guiding them to find greater pools of support for their
+          authentic visions. We believe that storytelling support is just as
+          important as funds.
+        </div>
+        <br />
+        <div class="bottom-text-paragraph">
+          WE DO NOT HAVE CALLS FOR PROPOSALS BUT WELCOME LOCAL NGOS AND
+          COMMUNITIES THAT URGENTLY NEED SUPPORT IN PROTECTING LAND, WATERS OR
+          BIODIVERSITY TO GET IN TOUCH VIA THE CONTACT FORM OR BY EMAIL
+          (INFO@CLOUDFORESTFUND.ORG). WE TEND TO SUPPORT SMALLER ʻSEEDʼ LEVEL
+          EFFORTS, WITH CAPACITY BUILDING, CO-VISIONING, FUNDING, AND
+          CONNECTIONS TO ALIGNED DONORS WHERE LARGER SUPPORT IS NEEDED. BUT WE
+          ALSO HELP MORE MATURE PROJECTS THAT NEED GUIDANCE ON FINDING FUNDS,
+          DRAFTING STRATEGIES AND STORYTELLING. WE DO EVERYTHING ONLY WITH THE
+          CONSENT OF PARTNERS.WE BELIEVE IN BUILDING LASTING FRIENDSHIPS AND
+          DEEP TIES WITH PARTNERS, AND ALSO IN ENJOYING THE JOURNEY.
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="pre-footer-svg">
-    <Fragment set:html={PreFooter} />
+  <!------------------->
+  <!-- End of bottom sect -->
+  <!------------------->
+
+  <div class="pre-footer">
+    <button class="custom-button">
+      <span>Email</span>
+    </button>
+    <div class="newsletter-text">SIGN UP TO OUR NEWSLETTER</div>
   </div>
 </div>
 
+<!-------------------------->
+<!-------------------------->
+<!-------------------------->
+<!------Testing now--------->
+<!-------------------------->
+<!-------------------------->
+<!-------------------------->
+<!-------------------------->
+
 <script>
+  window.addEventListener("scroll", function () {
+    // Get the coordinates of the target div
+    var mtnSvg = document.getElementById("mountain-svg");
+    var mtnSvgTop = mtnSvg.getBoundingClientRect().top;
+    var path2Left = document.querySelector("#mountainSvgLeft");
+    var path2Right = document.querySelector("#mountainSvgRight");
+
+    // Check if a portion of the target div (e.g., 10% from the top) is in the viewport
+    if (
+      mtnSvgTop < window.innerHeight * 0.9 &&
+      mtnSvgTop + mtnSvg.offsetHeight > 0.1 * window.innerHeight
+    ) {
+      console.log("Reached the target div!");
+      handleTextFade();
+
+      // Calculate scroll percentage based on target div's height
+      let scrollPercentage =
+        (window.scrollY - (mtnSvg.offsetTop - 0.1 * window.innerHeight)) /
+        (0.8 * window.innerHeight);
+
+      // Calculate draw length based on scroll percentage
+      let drawLength = 890 * scrollPercentage * 5; // Total length of the path
+      path2Left.style.strokeDasharray = `${drawLength}, 890`;
+      path2Right.style.strokeDasharray = `${drawLength}, 890`;
+      // Perform actions when the target div is reached
+
+      //reveal text
+      // Function to handle fade animation for elements within a container
+      function handleFade(containerSelector, elementSelector, delay) {
+        var containers = document.querySelectorAll(containerSelector);
+        containers.forEach(function (container) {
+          var elements = container.querySelectorAll(elementSelector);
+          elements.forEach(function (element, index) {
+            setTimeout(function () {
+              element.classList.add("show");
+            }, index * delay); // Apply delay based on index
+          });
+        });
+      }
+
+      // Call this function for left fade
+      function handleTextFade() {
+        handleFade(".mtn-text-container", ".text-over-mountain__left", 1000);
+        handleFade(".mtn-text-container", ".text-over-mountain__right", 1000);
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener("scroll", function () {
+    // Get the coordinates of the target div
+    var sect1 = document.getElementById("team-svg");
+    var sect1Top = sect1.getBoundingClientRect().top;
+    var path1 = document.querySelector("#vectorPath1");
+
+    // Check if the target div is in the viewport
+    if (sect1Top < window.innerHeight && sect1Top + sect1.offsetHeight > 0) {
+      console.log("Reached the target div!");
+      handleTextFade();
+
+      // Calculate scroll percentage based on target div's height
+      let scrollPercentage =
+        (window.scrollY - sect1.offsetTop) / sect1.offsetHeight;
+
+      // Calculate draw length based on scroll percentage
+      let drawLength = 2268.36 * scrollPercentage * 3; // Total length of the path
+      path1.style.strokeDasharray = `${drawLength}, 2268.36`;
+      // Perform actions when the target div is reached
+
+      //reveal text
+      // Function to handle fade animation for elements within a container
+      function handleFade(containerSelector, elementSelector, delay) {
+        var containers = document.querySelectorAll(containerSelector);
+        containers.forEach(function (container) {
+          var elements = container.querySelectorAll(elementSelector);
+          elements.forEach(function (element, index) {
+            setTimeout(function () {
+              element.classList.add("show");
+            }, index * delay); // Apply delay based on index
+          });
+        });
+      }
+      // Call this function for left fade
+      function handleTextFade() {
+        handleFade(".team-container-wrap", ".team-container__left", 1200);
+        handleFade(".team-container-wrap", ".team-container__right", 1200);
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener("scroll", function () {
+    // Get the coordinates of the target div
+    var splitSvg = document.getElementById("splitter-svg");
+    var splitSvgTop = splitSvg.getBoundingClientRect().top;
+    var splitLeft = document.querySelector("#splitterSvgLeft");
+    var splitRight = document.querySelector("#splitterSvgRight");
+
+    // Check if a portion of the target div (e.g., 10% from the top) is in the viewport
+    if (
+      splitSvgTop < window.innerHeight * 0.9 &&
+      splitSvgTop + splitSvg.offsetHeight > 0.1 * window.innerHeight
+    ) {
+      // console.log("Reached the target div!");
+      handleTextFade();
+
+      // Calculate scroll percentage based on target div's height
+      let scrollPercentage =
+        (window.scrollY - (splitSvg.offsetTop - 0.1 * window.innerHeight)) /
+        (0.8 * window.innerHeight);
+
+      // Calculate draw length based on scroll percentage
+      let drawLength = 511.14 * scrollPercentage * 2; // Total length of the path
+      splitLeft.style.strokeDasharray = `${drawLength}, 511.14`;
+      splitRight.style.strokeDasharray = `${drawLength}, 511.14`;
+      // Perform actions when the target div is reached
+
+      //reveal text
+      // Function to handle fade animation for elements within a container
+      function handleFade(containerSelector, elementSelector, delay) {
+        var containers = document.querySelectorAll(containerSelector);
+        containers.forEach(function (container) {
+          var elements = container.querySelectorAll(elementSelector);
+          elements.forEach(function (element, index) {
+            setTimeout(function () {
+              element.classList.add("show");
+            }, index * delay); // Apply delay based on index
+          });
+        });
+      }
+
+      // Call this function for left fade
+      function handleTextFade() {
+        handleFade(".splitter-text", ".splitter-left-container", 1000);
+        handleFade(".splitter-text", ".splitter-right-container", 1000);
+      }
+    }
+  });
+</script>
+
+<!-------------------------->
+<!-------------------------->
+<!-------------------------->
+
+<!-- script for counters -->
+<script>
+  // Function to handle intersection
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Play the animation for the current target
+        playAnimation(index);
+        // Unobserve the target to prevent unnecessary triggers
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  // Options for the Intersection Observer
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Trigger when 50% of the target is visible
+  };
+
+  // Create a new Intersection Observer
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  // Target elements
+  const svgContainers = [
+    document.getElementById("counter-img-1"),
+    document.getElementById("counter-img-2"),
+    document.getElementById("counter-img-3"),
+    document.getElementById("counter-img-4"),
+    document.getElementById("counter-img-5"),
+  ];
+
+  // Load animations for each target element
+  const animations = svgContainers.map((svgContainer, index) => {
+    const animItem = bodymovin.loadAnimation({
+      wrapper: svgContainer,
+      animType: "svg",
+      loop: false,
+      autoplay: false,
+      path: `https://lottie.host/45a33ab5-2a21-4ad4-89f7-3d7f10157461/w0mxsxxNj3.json`, // Adjust path accordingly
+    });
+    // Start observing each target element
+    observer.observe(svgContainer);
+    return animItem;
+  });
+
+  // Function to play the animation for the given index
+  function playAnimation(index) {
+    svgContainers[index].classList.remove("counter-hide");
+    animations[index].goToAndPlay(0, true);
+    // Event listener for animation completion
+    animations[index].addEventListener("complete", () => {
+      svgContainers[index].classList.add("counter-hide");
+    });
+  }
+</script>
+
+<!-- script for mountain wavy text -->
+<script>
+  // Function to handle intersection
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Play the animation for the current target
+        playAnimation(index);
+        // Unobserve the target to prevent unnecessary triggers
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  // Options for the Intersection Observer
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Trigger when 50% of the target is visible
+  };
+
+  // Create a new Intersection Observer
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  // Target elements
+  const svgContainers = [document.getElementById("mountain-wave-text-2")];
+
+  // Load animations for each target element
+  const animations = svgContainers.map((svgContainer, index) => {
+    const animItem = bodymovin.loadAnimation({
+      wrapper: svgContainer,
+      animType: "svg",
+      loop: true,
+      autoplay: false,
+      path: `https://lottie.host/52b1ec94-051e-4211-aa91-4eb47573becf/Berq6IyIPs.json`, // Adjust path accordingly
+    });
+    // Start observing each target element
+    observer.observe(svgContainer);
+    return animItem;
+  });
+
+  // Function to play the animation for the given index
+  function playAnimation(index) {
+    svgContainers[index].classList.remove("counter-hide");
+    animations[index].goToAndPlay(0, true);
+    // Event listener for animation completion
+    animations[index].addEventListener("complete", () => {
+      svgContainers[index].classList.add("counter-hide");
+    });
+  }
+</script>
+
+<script>
+  // Flag to track whether mountain SVG drawing has been triggered
+  let mountainSvgDrawn = false;
+
   // Debounce function
-  function debounce(func, wait, immediate) {
+  function debounce(func, wait) {
     let timeout;
     return function () {
       const context = this,
         args = arguments;
       const later = function () {
         timeout = null;
-        if (!immediate) func.apply(context, args);
+        func.apply(context, args);
       };
-      const callNow = immediate && !timeout;
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
     };
   }
 
-  // Your existing code for animating SVG paths
   const svgLeft = document.getElementById("svgPathLeft");
   const lengthLeft = svgLeft.getTotalLength();
   svgLeft.style.strokeDasharray = lengthLeft;
@@ -298,6 +1046,15 @@ import Header from "../components/Header.astro";
 
       const drawRight = lengthRight * scrollpercent * 7;
       svgRight.style.strokeDashoffset = lengthRight - drawRight;
+
+      // Check if svgLeft is fully drawn and mountain SVG drawing hasn't been triggered
+      if (svgLeft.style.strokeDashoffset <= 0 && !mountainSvgDrawn) {
+        // console.log("SVG drawing is completed!");
+        drawMountainSvg();
+        // Set flag to true to indicate mountain SVG drawing has been triggered
+        mountainSvgDrawn = true;
+        // You can perform additional actions here
+      }
     }, 10)
   );
 </script>
@@ -306,6 +1063,8 @@ import Header from "../components/Header.astro";
   document.addEventListener("DOMContentLoaded", function () {
     const cloudSect = document.querySelector(".cloud-sect");
     const mountainContainer = document.querySelector(".mountain-container");
+    const cloudReveal = document.querySelector(".cloud-reveal-img");
+    const cloudRevealText = document.querySelector(".mountain-reveal-text");
 
     function fadeInMountain() {
       const cloudSectRect = cloudSect.getBoundingClientRect();
@@ -319,6 +1078,14 @@ import Header from "../components/Header.astro";
         mountainContainer.classList.remove("fade-in");
         mountainContainer.classList.remove("move-up");
       }
+
+      if (window.scrollY > triggerPoint) {
+        cloudRevealText.classList.add("cloud-fade-in");
+        cloudReveal.classList.add("cloud-fade-out");
+      } else {
+        cloudRevealText.classList.remove("cloud-fade-out");
+        cloudReveal.classList.remove("cloud-fade-in");
+      }
     }
 
     window.addEventListener("scroll", fadeInMountain);
@@ -326,6 +1093,107 @@ import Header from "../components/Header.astro";
     fadeInMountain(); // Initial check on page load
   });
 </script>
+
+<script>
+  // Define the handleScroll function outside of the DOMContentLoaded event listener
+  function handleScroll() {
+    // Get the mountain-sect container
+    const mountainSect = document.querySelector(".team-svg");
+    // Get the mountain-back container
+    const mountainBack = document.getElementById("mountainBack");
+    const mountainLogo = document.getElementById("mtnLogo");
+
+    // Get the distance from the top of the window to the bottom of the mountain-sect container
+    const distanceToTop = mountainSect.getBoundingClientRect().bottom;
+
+    // If the distance to the top of the mountain-sect container is less than the window height,
+    // the user has scrolled into the mountain-sect container
+    if (distanceToTop < window.innerHeight) {
+      // Add a class to the mountain-back container to trigger the sliding animation
+      mountainBack.classList.add("slide-up");
+      mountainLogo?.classList.add("fade-in");
+    } else {
+      // Remove the class if the user scrolls out of the mountain-sect container
+      mountainBack.classList.remove("slide-up");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Call the handleScroll function once to check the initial state
+    handleScroll();
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+  });
+</script>
+
+<!-- handle top image upon page load scroll -->
+<script>
+  function handleScroll() {
+    // Get the div to which you want to add the class
+    const targetDiv = document.getElementById("topImg");
+
+    // Add your class to the div
+    targetDiv.classList.add("top-img-fade-in");
+
+    // Remove the scroll event listener to prevent adding the class again on subsequent scrolls
+    window.removeEventListener("scroll", handleScroll);
+  }
+
+  // Add scroll event listener to trigger the handleScroll function on scroll
+  window.addEventListener("scroll", handleScroll);
+</script>
+
+<!-----------------  -->
+<!-- testing fades -->
+<!-----------------  -->
+
+<script>
+  // Function to check if an element is in the viewport
+  function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to handle fade animation for elements within a container
+  function handleFade(containerSelector, elementSelector) {
+    var containers = document.querySelectorAll(containerSelector);
+    containers.forEach(function (container) {
+      if (isInViewport(container)) {
+        var elements = container.querySelectorAll(elementSelector);
+        elements.forEach(function (element) {
+          element.classList.add("show");
+        });
+      }
+    });
+  }
+
+  // Call this function for left fade
+  function handleLeftFade() {
+    handleFade(".blurbContainer", ".topSvgBlurbLeft");
+    // handleFade(".mtn-text-container", ".text-over-mountain__left");
+  }
+
+  // Call this function for right fade
+  function handleRightFade() {
+    handleFade(".blurbContainer", ".topSvgBlurbRight");
+    // handleFade(".mtn-text-container", ".text-over-mountain__right");
+  }
+
+  // Add scroll event listeners
+  window.addEventListener("scroll", handleLeftFade);
+  window.addEventListener("scroll", handleRightFade);
+</script>
+
+<!--  -->
+<!--  -->
+<!--  -->
 
 <style>
   /* Define Futura font */
@@ -347,6 +1215,8 @@ import Header from "../components/Header.astro";
   body {
     font-family: "Futura", sans-serif;
     overflow-x: hidden;
+    text-transform: uppercase;
+
     /* Fallback font family */
   }
 
@@ -371,6 +1241,10 @@ import Header from "../components/Header.astro";
     font-weight: lighter;
     letter-spacing: 0.3rem !important;
   }
+  .top-img-fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+  }
   .fade-in {
     animation: fadeIn 1s ease-in-out forwards;
     opacity: 0;
@@ -383,6 +1257,14 @@ import Header from "../components/Header.astro";
     to {
       opacity: 1;
     }
+  }
+  .cloud-fade-out {
+    opacity: 0 !important;
+  }
+
+  .cloud-fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 1 !important;
   }
   .topSvgTitle {
     font-weight: bold;
@@ -398,19 +1280,35 @@ import Header from "../components/Header.astro";
     position: absolute;
     max-width: 15rem;
     text-align: right;
-    left: 22%;
-    top: 72%;
-    transform: translate(-50%, -50%);
+    left: -100%; /* Start off-screen */
+    top: 68%;
+    opacity: 0;
+    transition:
+      left 2s ease,
+      opacity 2s ease;
   }
+
+  .topSvgBlurbLeft.show {
+    left: 15%; /* Ending position */
+    opacity: 1;
+  }
+
   .topSvgBlurbRight {
     font-weight: bold;
     font-size: 0.8rem;
     position: absolute;
     max-width: 15rem;
     text-align: left;
-    right: 8%;
-    top: 74%;
-    transform: translate(-50%, -50%);
+    right: -100%;
+    top: 70%;
+    opacity: 0;
+    transition:
+      right 2s ease,
+      opacity 2s ease;
+  }
+  .topSvgBlurbRight.show {
+    opacity: 1;
+    right: 15%;
   }
   .spacer {
     height: 5vh;
@@ -424,11 +1322,42 @@ import Header from "../components/Header.astro";
     margin-top: 1rem;
   }
   .cloud-container {
+    overflow: hidden;
+    margin-top: 4rem;
+    min-height: 120vh;
     position: relative;
-
+    /* background-color: white; */
     width: 150%; /* Adjust as needed */
     margin-left: -25%; /* Half of the excess width to keep it centered */
     margin-right: -25%; /* Half of the excess width to keep it centered */
+  }
+  .cloud-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; /* Adjust the height of the gradient overlay */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.8)
+    ); /* Adjust opacity as needed */
+    pointer-events: none;
+  }
+  .cloud-reveal {
+    position: absolute;
+    top: 51%; /* Position the element 50% from the top */
+    left: 50%; /* Position the element 50% from the left */
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+    width: 110%;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .cloud-reveal-img {
+    transition: opacity 3s ease;
+    width: 100%;
   }
   .mountain-container {
     width: 150%; /* Adjust as needed */
@@ -441,8 +1370,21 @@ import Header from "../components/Header.astro";
       opacity 0.2s ease,
       transform 0.2s ease;
   }
+
+  .mountain-reveal-text {
+    opacity: 0;
+    transition: opacity 1s ease;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    position: absolute;
+    z-index: 100;
+    top: 58%; /* Position the element 50% from the top */
+    left: 50%; /* Position the element 50% from the left */
+    transform: translate(-50%, -58%);
+  }
   .text-over-mountain__left {
-    left: 12%;
+    left: -100%;
     position: absolute;
     width: 18%;
     text-align: left;
@@ -451,9 +1393,17 @@ import Header from "../components/Header.astro";
     line-height: 2.2rem;
     letter-spacing: 0.2rem;
     top: 20%;
+    opacity: 0;
+    transition:
+      left 2s ease,
+      opacity 2s ease;
+  }
+  .text-over-mountain__left.show {
+    opacity: 1;
+    left: 12%;
   }
   .text-over-mountain__right {
-    right: 10%;
+    right: -100%;
     position: absolute;
     width: 25%;
     text-align: left;
@@ -462,11 +1412,47 @@ import Header from "../components/Header.astro";
     line-height: 3.2rem;
     letter-spacing: 0.2rem;
     top: 20%;
+    opacity: 0;
+    transition:
+      right 2s ease,
+      opacity 2s ease;
+  }
+  .text-over-mountain__right.show {
+    opacity: 1;
+    right: 10%;
   }
   .mountain-container.fade-in {
     opacity: 1;
     transform: translateY(0);
   }
+
+  .mountain-front {
+    width: 105%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .mtnSideFrontLayer {
+    position: absolute;
+    z-index: 5;
+    margin: 0 auto;
+    width: 150%; /* Adjust as needed */
+    margin-left: -27%; /* Half of the excess width to keep it centered */
+    margin-right: -28%;
+  }
+  .mountain-back {
+    position: absolute;
+    top: 100%; /* Initially hide below the mountain-sect container */
+    width: 100%;
+    z-index: 1;
+    left: 12%;
+    transition: top 1s ease; /* Add transition for smooth sliding animation */
+  }
+  .mtnSideBackLayer {
+  }
+  .slide-up {
+    top: 6%; /* Final position where you want the mountain-back container to slide up */
+  }
+
   .blue-sect::before {
     content: "";
     position: absolute;
@@ -488,6 +1474,17 @@ import Header from "../components/Header.astro";
     margin-top: -5%;
     background-color: #002235;
     min-height: 20vh;
+    color: white;
+  }
+  .blue-sect-mountain {
+    text-align: center;
+    padding: 4rem;
+    /* position: relative; */
+    position: absolute;
+    z-index: 1000;
+    /* margin-top: -20%; */
+    min-height: 20vh;
+    top: 96%;
     color: white;
   }
   .blue-headline {
@@ -514,6 +1511,21 @@ import Header from "../components/Header.astro";
     margin-top: -15%;
     width: 105%; /* Adjust as needed */
     position: relative;
+    min-height: 120vh;
+    margin-bottom: 18rem;
+  }
+  .team-name__tilt-left span {
+    display: inline-block; /* Set the display property to inline-block */
+    vertical-align: middle; /* Optional: Align the image vertically with the text */
+    margin-right: 0.5em; /* Optional: Add some spacing between the image and the text */
+  }
+  .team-name__tilt-right span {
+    display: inline-block; /* Set the display property to inline-block */
+    vertical-align: middle; /* Optional: Align the image vertically with the text */
+    margin-left: 0.5em; /* Optional: Add some spacing between the image and the text */
+  }
+  .team-svg-line-animate {
+    transform: translateZ(-1px);
   }
   .team-line-svg {
     width: 85%;
@@ -524,8 +1536,17 @@ import Header from "../components/Header.astro";
     width: 35%;
     height: auto;
     text-align: center;
-    top: 1%;
+    top: 3%;
     margin: 0 auto;
+    left: -100%;
+    opacity: 0;
+    transition:
+      left 2s ease,
+      opacity 2s ease;
+  }
+  .team-container__left.show {
+    opacity: 1;
+    left: 0;
   }
   .team-container__middle {
     position: absolute;
@@ -534,9 +1555,24 @@ import Header from "../components/Header.astro";
     position: absolute;
     width: 35%;
     height: auto;
-    text-align: center;
-    top: 1%;
-    right: 12%;
+    text-align: left;
+    top: 3%;
+    margin: 0 auto;
+    right: -100%;
+    opacity: 0;
+    transition:
+      right 2s ease,
+      opacity 2s ease;
+  }
+  .team-container__right.show {
+    opacity: 1;
+    right: 0;
+  }
+  .founder-title {
+    font-size: 2rem;
+  }
+  .founder-desc {
+    line-height: 2rem;
   }
   .team-title {
     font-size: 3rem;
@@ -551,35 +1587,239 @@ import Header from "../components/Header.astro";
   }
   .team-description .desc {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 3vw;
     letter-spacing: 0.1rem;
-    line-height: 4rem;
+    line-height: 3.8rem;
   }
   .splitter-svg {
     margin-top: -10%;
   }
   .monkey-sect {
-    margin-top: -5rem;
+    margin-top: -1rem;
     position: relative;
   }
   .left-plant-wrapper {
     position: absolute;
-    top: 0;
+    top: -16%;
     left: 0;
-    width: 20rem;
+    width: 28rem;
+    z-index: 1;
   }
   .right-plant-wrapper {
     position: absolute;
-    top: 0;
+    top: -16%;
     right: 0;
-    width: 20rem;
+    width: 28rem;
+    z-index: 1;
   }
   .monkey-wrapper {
+    position: relative;
+    z-index: 10000;
     width: 35rem;
     margin: 0 auto;
     padding-top: 15rem;
   }
   .bottom-svg {
-    margin-top: -33rem;
+    margin-top: -33%;
+    z-index: 1000;
   }
+  .team-list-container {
+    margin-top: 8%;
+  }
+  .team-list {
+  }
+  .team-list-item {
+    letter-spacing: 0.1rem;
+    padding: 0.5rem;
+  }
+  .team-subtitle {
+    font-size: 0.8rem;
+  }
+  .team-blurb {
+    position: absolute;
+    top: 18%;
+    width: 40%;
+    right: 60%;
+  }
+  .team-blurb .blurb {
+    font-weight: bold;
+    font-size: 2vw;
+    letter-spacing: 0.1rem;
+    line-height: 2.6rem;
+  }
+  .team-block-left-1 {
+    position: absolute;
+    width: 75%;
+    height: auto;
+    text-align: left;
+    top: 51%;
+    left: 10%;
+    margin: 0 auto;
+  }
+  .team-block-right-1 {
+    position: absolute;
+    width: 75%;
+    height: auto;
+    text-align: left;
+    top: 40%;
+    right: 10%;
+    margin: 0 auto;
+  }
+  .team-block-left-2 {
+    position: absolute;
+    width: 75%;
+    height: auto;
+    text-align: left;
+    top: 76%;
+    left: 10%;
+    margin: 0 auto;
+  }
+  .team-block-right-2 {
+    position: absolute;
+    width: 75%;
+    height: auto;
+    text-align: left;
+    top: 63%;
+    right: 10%;
+    margin: 0 auto;
+  }
+  .team-block-subtitle {
+  }
+  .team-block-title {
+    font-size: 1.3vw;
+    margin-bottom: 0.2rem;
+  }
+  .vertical-uni {
+    position: absolute;
+    width: 75%;
+    height: auto;
+    text-align: left;
+    top: 88%;
+    left: 10%;
+    margin: 0 auto;
+  }
+  .vert-uni-text {
+    font-weight: bold;
+    font-size: 4vw;
+  }
+  .vertical-blurb {
+    position: absolute;
+    width: 45%;
+    height: auto;
+    text-align: left;
+    top: 90%;
+    left: 65%;
+    margin: 0 auto;
+  }
+  .vert-blurb-text {
+    font-weight: bold;
+    font-size: 3vw;
+  }
+  .mtnLogo {
+    position: absolute;
+    top: 27%;
+    left: 29%;
+    z-index: 10;
+    opacity: 0;
+  }
+  .splitter-left-container {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 35%;
+  }
+  .splitter-left-text {
+    font-size: 2vw;
+    font-weight: bold;
+  }
+  .splitter-right-container {
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    width: 60%;
+    text-align: center;
+  }
+  .splitter-right-img {
+    width: 45%;
+    height: auto;
+    margin: 0 auto;
+  }
+  h1.splitter {
+    padding: 2rem;
+    font-size: 2vw;
+  }
+  .monkey-img {
+    top: 4%;
+    z-index: 1000;
+  }
+  .monkey-arch-text {
+    position: absolute;
+    top: 12%;
+    left: 27%;
+    width: 45%;
+  }
+  .bottom-left-container {
+    text-align: right;
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    width: 35%;
+  }
+  .bottom-text-block {
+  }
+  .bottom-text-block-header {
+    font-weight: bold;
+    font-size: 2vw;
+  }
+  .bottom-text-paragraph {
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+    font-size: 1.4vw;
+  }
+  .bottom-right-container {
+    text-align: left;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 35%;
+  }
+  .bottom-right-headline {
+    font-size: 4vw;
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+  }
+  .pre-footer {
+    min-height: 15vh;
+    padding: 5rem;
+    text-align: center;
+  }
+  .custom-button {
+    background-image: url("./public/assets/img/buttonOutline.svg?raw");
+    background-size: cover;
+    width: 200px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  .newsletter-text {
+    margin-top: 1.5rem;
+  }
+
+  .bottom-text-player {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .top-text-player {
+    width: 100%;
+    position: absolute;
+    top: -15%;
+  }
+
+  /* .leftFade.show,
+  .rightFade.show {
+    opacity: 1;
+    transform: translateX(0);
+  } */
 </style>

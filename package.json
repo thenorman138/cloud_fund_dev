@@ -13,6 +13,9 @@
     "@astrojs/netlify": "^5.2.0",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.4.0",
+    "astro-integration-lottie": "^0.2.3",
+    "lottie-web": "^5.12.2",
+    "scroll-svg": "^1.5.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }

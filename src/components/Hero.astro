@@ -1,0 +1,81 @@
+---
+import TopSVG from "../assets/img/homeTopSvg.svg?raw";
+import { Image } from "astro:assets";
+import "./public/assets/css/fonts.css";
+import "@astrojs/tailwind/base.css";
+import circleMenu from "../assets/img/circleMenu.png";
+---
+
+<div class="title-section" style="margin-bottom:3rem;">
+  <h1 class="title-text">SUPPORTING BEAUTIFUL SPECIES AND FLOURISHING</h1>
+  <h1 class="title-text">LAND DISSIPATING BEFORE OUR EYES</h1>
+  <br />
+  <h3 class="subtitle-text">HELPING THE EARTH BREATHE</h3>
+</div>
+<div class="inner-menu" style="margin-top:6rem;">
+  <div class="grid grid-cols-3 gap-3">
+    <div class="inner-menu-items"></div>
+    <div class="inner-menu-items">
+      <div style="text-align: center;">
+        <Image
+          src={circleMenu}
+          alt="hand drawn circle"
+          width="100px"
+          height="120px"
+          style={"margin:0 auto"}
+        />
+      </div>
+      WORK WITH US
+    </div>
+    <div class="inner-menu-items"></div>
+  </div>
+
+  <div class="grid grid-cols-3 gap-3">
+    <div class="inner-menu-items">
+      <div style="text-align: center;">
+        <Image
+          src={circleMenu}
+          alt="hand drawn circle"
+          width="100px"
+          height="120px"
+          style={"margin:0 auto"}
+        />
+      </div>
+      WHERE WE WORK
+    </div>
+    <div class="inner-menu-items"></div>
+    <div class="inner-menu-items">
+      <div style="text-align: center;">
+        <Image
+          src={circleMenu}
+          alt="hand drawn circle"
+          width="100px"
+          height="120px"
+          style={"margin:0 auto"}
+        />
+      </div>
+      OUR STORY
+    </div>
+  </div>
+</div>
+<div class="first-section" style="text-align:center;">
+  <img
+    src="./public/assets/img/headerImage.png"
+    alt="Image"
+    style="width:100%; height: auto; margin-top:55px;opacity:0;"
+    id="topImg"
+  />
+</div>
+<div class="topSVG" style="position:relative;">
+  <div style="margin-left:-2%; margin-right:-2%;">
+    <Fragment set:html={TopSVG} />
+  </div>
+  <h1 class="topSvgTitle">OUR IMPACT</h1>
+  <h1 class="topSvgBlurbLeft">A SMALL FUND WITH BIG DREAMS</h1>
+  <h1 class="topSvgBlurbRight">
+    WE MEASURE IMPACT IN ACRES OF LAND AND VOLUME OF SEA SAVED FROM DESTRUCTION,
+    SPECIES SAFEGUARDED,PROJECTS SUPPORTED, AND DOLLARS RAISED FOR BIO-CULTURAL
+    DIVERSITY THROUGH OUR 4-PILLAR APPROACH. WE MAKE OUR IMPACT THROUGH
+    'CONNECTING THE TREES'.
+  </h1>
+</div><!-- End of topSVG -->

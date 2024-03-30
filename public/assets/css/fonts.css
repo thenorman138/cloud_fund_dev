@@ -17,6 +17,15 @@ body {
     font-family: 'Futura', sans-serif;
     overflow-x: hidden;
     /* Fallback font family */
+    cursor: url('http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif'), auto
+}
+
+.custom-cursor {
+    position: absolute;
+    pointer-events: none;
+    /* Ensure the cursor doesn't interfere with mouse events */
+    z-index: 9999;
+    /* Ensure the cursor is above other elements */
 }
 
 .myriad-font{
